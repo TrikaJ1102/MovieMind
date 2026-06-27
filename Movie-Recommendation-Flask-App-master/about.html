@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About MovieMind</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="overlay">
+        <div class="container">
+
+            <h1>🎬 About MovieMind</h1>
+
+            <p class="subtitle">
+                MovieMind is an AI-powered movie recommendation platform that suggests movies based on user preferences using collaborative filtering and machine learning techniques.
+            </p>
+
+            <div class="section">
+
+                <h2>How MovieMind Works</h2>
+
+                <div class="movie-card">
+                    <p>
+                        <strong>Step 1:</strong> Enter the name of a movie and provide your personal rating (between 1 and 5).
+                    </p>
+                </div>
+
+                <br>
+
+                <div class="movie-card">
+                    <p>
+                        <strong>Step 2:</strong> MovieMind searches a similarity matrix created from thousands of historical user ratings.
+                    </p>
+                </div>
+
+                <br>
+
+                <div class="movie-card">
+                    <p>
+                        <strong>Step 3:</strong> Pearson Correlation is used to identify movies with similar user-rating behavior.
+                    </p>
+                </div>
+
+                <br>
+
+                <div class="movie-card">
+                    <p>
+                        <strong>Step 4:</strong> The searched movie is excluded, and the top 8 most similar movies are recommended.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="section">
+
+                <h2>Technology Stack</h2>
+
+                <div class="recent-searches">
+                    <span>Python</span>
+                    <span>Flask</span>
+                    <span>Pandas</span>
+                    <span>NumPy</span>
+                    <span>Scikit-Learn</span>
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                </div>
+
+            </div>
+
+            <div class="section">
+
+                <h2>Recommendation Algorithm</h2>
+
+                <div class="movie-card">
+                    <p>
+                        MovieMind uses <strong>Item-Based Collaborative Filtering</strong>. It analyzes how users have rated different movies and computes similarity scores using <strong>Pearson Correlation</strong>. Movies with the highest similarity
+                        scores are ranked and the top 8 recommendations are displayed.
+                    </p>
+                </div>
+
+            </div>
+
+            <div style="margin-top:35px; text-align:center;">
+                <a href="{{ url_for('home') }}">
+                    <button type="button">⬅ Back to Home</button>
+                </a>
+            </div>
+
+            <footer style="margin-top:40px; text-align:center; color:#999;">
+                MovieMind © 2026<br> Built with Flask, Pandas & Machine Learning
+            </footer>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
